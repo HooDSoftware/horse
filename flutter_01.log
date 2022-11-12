@@ -1,0 +1,85 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+RPCError: _flutter.renderFrameWithRasterStats: (-32601) Unknown method "_flutter.renderFrameWithRasterStats".
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:1746:45)
+#1      VmService._call (package:vm_service/src/vm_service.dart:2262:21)
+#2      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:2233:14)
+#3      VmService.callMethod (package:vm_service/src/vm_service.dart:2215:12)
+#4      FlutterVmService.callMethodWrapper (package:flutter_tools/src/vmservice.dart:463:28)
+#5      FlutterVmService.renderFrameWithRasterStats (package:flutter_tools/src/vmservice.dart:562:49)
+#6      ResidentHandlers.debugFrameJankMetrics (package:flutter_tools/src/resident_runner.dart:691:35)
+<asynchronous suspension>
+#7      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1739:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.4, on Pop!_OS 22.04 LTS
+    5.19.0-76051900-generic, locale en_US.UTF-8)
+    • Flutter version 3.3.4 on channel stable at
+      /home/hoodsoftwares/android/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision eb6d86ee27 (5 weeks ago), 2022-10-04 22:31:45 -0700
+    • Engine revision c08d7d5efc
+    • Dart version 2.18.2
+    • DevTools version 2.15.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    • Android SDK at /home/hoodsoftwares/Android/Sdk
+    • Platform android-33, build-tools 33.0.0
+    • Java binary at: /home/hoodsoftwares/android/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build
+      11.0.13+0-b1751.21-8125866)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[✓] Linux toolchain - develop for Linux desktop
+    • Ubuntu clang version 14.0.0-1ubuntu1
+    • cmake version 3.22.1
+    • ninja version 1.10.1
+    • pkg-config version 0.29.2
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at /opt/android-studio-2021.3.1/android-studio
+    • Flutter plugin version 70.2.3
+    • Dart plugin version 213.7433
+    • Java version OpenJDK Runtime Environment (build
+      11.0.13+0-b1751.21-8125866)
+
+[✓] Android Studio
+    • Android Studio at /home/hoodsoftwares/android/android-studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • android-studio-dir = /home/hoodsoftwares/android/android-studio
+    • Java version OpenJDK Runtime Environment (build
+      11.0.13+0-b1751.21-8125866)
+
+[✓] VS Code (version 1.72.2)
+    • VS Code at /usr/share/code
+    • Flutter extension version 3.52.0
+
+[✓] Connected device (2 available)
+    • Linux (desktop) • linux  • linux-x64      • Pop!_OS 22.04 LTS
+      5.19.0-76051900-generic
+    • Chrome (web)    • chrome • web-javascript • Google Chrome 108.0.5355.0 dev
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
